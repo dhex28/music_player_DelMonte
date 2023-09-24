@@ -1,0 +1,228 @@
+CRITICAL - 2023-09-23 10:04:37 --> Class "App\Controllers\MusicModel" not found
+in APPPATH\Controllers\MusicController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 10:04:37 --> Class "App\Controllers\MusicModel" not found
+in APPPATH\Controllers\MusicController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 10:05:22 --> Class "App\Controllers\MusicModel" not found
+in APPPATH\Controllers\MusicController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+ERROR - 2023-09-23 10:05:36 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\music_player_delmonte\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\music_player_delmonte\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\music_player_delmonte\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\music_player_delmonte\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\music_player_delmonte\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\music_player_delmonte\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\music_player_delmonte\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\music_player_delmonte\app\Controllers\MusicController.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(919): App\Controllers\MusicController->index()
+#8 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+#9 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\music_player_delmonte\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\music_player_delmonte\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\music_player_delmonte\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\music_player_delmonte\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\music_player_delmonte\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\music_player_delmonte\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\music_player_delmonte\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\music_player_delmonte\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\music_player_delmonte\app\Controllers\MusicController.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(919): App\Controllers\MusicController->index()
+#7 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+#8 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\music_player_delmonte\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\music_player_delmonte\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-23 10:05:36 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `musics`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MusicController.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+ERROR - 2023-09-23 10:06:00 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'music' in C:\laragon\www\music_player_delmonte\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\music_player_delmonte\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'music', 3306, '', 0)
+#1 C:\laragon\www\music_player_delmonte\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\music_player_delmonte\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\music_player_delmonte\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\music_player_delmonte\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\music_player_delmonte\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\music_player_delmonte\app\Controllers\MusicController.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(919): App\Controllers\MusicController->index()
+#8 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+#9 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\music_player_delmonte\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\music_player_delmonte\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'music' in C:\laragon\www\music_player_delmonte\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\music_player_delmonte\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\music_player_delmonte\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\music_player_delmonte\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\music_player_delmonte\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\music_player_delmonte\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\music_player_delmonte\app\Controllers\MusicController.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(919): App\Controllers\MusicController->index()
+#7 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+#8 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\music_player_delmonte\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\music_player_delmonte\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-23 10:06:00 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'music'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `musics`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MusicController.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+ERROR - 2023-09-23 10:06:23 --> mysqli_sql_exception: Table 'music_player.musics' doesn't exist in C:\laragon\www\music_player_delmonte\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\music_player_delmonte\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\music_player_delmonte\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\music_player_delmonte\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\music_player_delmonte\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\music_player_delmonte\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\music_player_delmonte\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\music_player_delmonte\app\Controllers\MusicController.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(919): App\Controllers\MusicController->index()
+#8 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+#9 C:\laragon\www\music_player_delmonte\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\music_player_delmonte\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\music_player_delmonte\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-23 10:06:23 --> Table 'music_player.musics' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `musics`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MusicController.php(12): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 10:07:10 --> Call to undefined function form_open_multipart()
+in APPPATH\Views\music\upload.php on line 2.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music/upload', [], true)
+ 4 APPPATH\Controllers\MusicController.php(36): view('music/upload')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->upload()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 10:29:44 --> Undefined variable $music
+in APPPATH\Views\music\upload.php on line 45.
+ 1 APPPATH\Views\music\upload.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $music', 'C:\\laragon\\www\\music_player_delmonte\\app\\Views\\music\\upload.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\music_player_delmonte\\app\\Views\\music\\upload.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music/upload', [], true)
+ 5 APPPATH\Controllers\MusicController.php(36): view('music/upload')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->upload()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 10:30:59 --> Undefined variable $music
+in APPPATH\Views\music\upload.php on line 45.
+ 1 APPPATH\Views\music\upload.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $music', 'C:\\laragon\\www\\music_player_delmonte\\app\\Views\\music\\upload.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\music_player_delmonte\\app\\Views\\music\\upload.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music/upload', [], true)
+ 5 APPPATH\Controllers\MusicController.php(36): view('music/upload')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->upload()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 10:31:30 --> Undefined variable $music
+in APPPATH\Views\music\upload.php on line 45.
+ 1 APPPATH\Views\music\upload.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $music', 'C:\\laragon\\www\\music_player_delmonte\\app\\Views\\music\\upload.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\music_player_delmonte\\app\\Views\\music\\upload.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('music/upload', [], true)
+ 5 APPPATH\Controllers\MusicController.php(36): view('music/upload')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->upload()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 10:32:28 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\MusicController.php on line 11.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\music_player_delmonte\\app\\Controllers\\MusicController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\MusicController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\MusicController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\MusicController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 13:55:21 --> Class "App\Controllers\MusicModel" not found
+in APPPATH\Controllers\MusicController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 13:55:22 --> Class "App\Controllers\MusicModel" not found
+in APPPATH\Controllers\MusicController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 13:55:54 --> Class "App\Controllers\MusicModel" not found
+in APPPATH\Controllers\MusicController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 13:55:57 --> Class "App\Controllers\MusicModel" not found
+in APPPATH\Controllers\MusicController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
+CRITICAL - 2023-09-23 13:55:57 --> Class "App\Controllers\MusicModel" not found
+in APPPATH\Controllers\MusicController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MusicController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MusicController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music_player_delmonte\\public\\index.php')
