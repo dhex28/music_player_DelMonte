@@ -108,5 +108,42 @@ class MusicController extends BaseController
             return $this->response->setJSON($musicList);
         }
 
+        public function playlists($playlistID)
+{
+
+    $playlistModel = new PlaylistModel();
+    $musicModel = new MusicModel();
+
+
+    $playlist = $playlistModel->find($playlistID);
+
+    if (!$playlist) {
+        return redirect()->to('/');
+    }
+
+    $playlistMusicModel = new PlaylistMusicModel();
+    $musicTrackIDs = $playlistMusicModel->where('playlist_id', $playlistID)->findAll();
+
+    $music = [];
+
+
+    foreach ($musicTrackIDs as $musicTrackID) {
+        $musicTrack = $musicModel->find($musicTrackID['music_track_id']);
+
+        if ($musicTrack) {
+            $music[] = $musicTrack;
+        }
+    }
+
+
+    $data = [
+        'playlist' => $playlist,
+        'musicTracks' => $music,
+    ];
+
+
+    return view('playlist', $data);
+}
+
         
 }

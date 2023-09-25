@@ -74,8 +74,9 @@
                     <?php if (isset($playlists) && is_array($playlists)) : ?>
                         <?php foreach ($playlists as $playlist) : ?>
                             <li>
-                                <a href="#" class="playlist-link" data-playlist-id="<?= $playlist['id'] ?>">
-                                <?= $playlist['name'] ?></a>
+                            <a href="<?= base_url('playlist/' . $playlist['id']) ?>" class="playlist-link" data-playlist-id="<?= $playlist['id'] ?>">
+                            <?= $playlist['name'] ?>
+                            </a>
                             </li>
                             <?php endforeach; ?>
                             <?php else : ?>
@@ -124,7 +125,7 @@
     My Playlist
     </button>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadMusic">Upload Music</button>
+
 
 
 <!-- Modal for uploading music -->
@@ -158,6 +159,7 @@
 
 
     <audio id="audio" controls ></audio>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadMusic">Upload Music</button>
 <div class="container">
 <ul id="playlist">
     <?php foreach ($musicList as $music): ?>
@@ -452,7 +454,7 @@ $(document).ready(function () {
 </script>
 
 </script>
-<script>
+<!-- <script>
 $(document).ready(function () {
     $('.playlist-link').on('click', function () {
         const playlistID = $(this).data('playlist-id');
@@ -499,7 +501,7 @@ $(document).ready(function () {
 });
 
 
-</script>
+</script> -->
 
 <script>
     $(document).ready(function () {

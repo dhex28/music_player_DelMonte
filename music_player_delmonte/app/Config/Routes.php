@@ -11,6 +11,6 @@ $routes->post('music/upload', 'MusicController::uploadMusic');
 $routes->post('music/getPlaylistMusic', 'MusicController::getPlaylistMusic'); // Add this route for getting playlist music
 $routes->post('music/addToPlaylist', 'MusicController::addToPlaylist'); // Add this route for adding music to a playlist
 $routes->post('music/getPlaylistMusic', 'MusicController::getPlaylistMusic');
-
+$routes->get('playlist/(:num)', 'MusicController::playlists/$1');
 
 
